@@ -3,12 +3,12 @@
 =======
 # Java ⇄ C Code Translator
 
-A Spring Boot application that translates Java code to C and vice versa using AI (OpenAI GPT-3.5) with OCR support for image-based code input.
+A Spring Boot application that translates Java code to C and vice versa using AI (anthropic api) with OCR support for image-based code input.
 
 ## 🚀 Features
 
 - **Bidirectional Translation**: Convert Java to C and C to Java
-- **AI-Powered**: Uses OpenAI GPT-3.5 for intelligent code translation
+- **AI-Powered**: Uses anthropic api for intelligent code translation
 - **OCR Support**: Extract code from images using Tesseract OCR
 - **Syntax Validation**: Validates both source and translated code syntax
 - **Web Interface**: Clean, responsive frontend with drag-and-drop image upload
@@ -20,7 +20,7 @@ A Spring Boot application that translates Java code to C and vice versa using AI
 ### Backend
 - **Spring Boot 3.2.0** - Main framework
 - **Java 17** - Programming language
-- **OpenAI GPT-3.5** - AI translation engine
+- **anthropic api** - AI translation engine
 - **Tesseract OCR** - Image text extraction
 - **Maven** - Build tool
 - **WebFlux** - Reactive HTTP client
@@ -42,7 +42,7 @@ Before running this application, make sure you have:
 
 1. **Java 17 or higher** installed
 2. **Maven 3.6+** installed
-3. **OpenAI API Key** (GPT-3.5 access)
+3. **Anthropic API Key** (GPT-3.5 access)
 4. **Tesseract OCR** installed on your system
 5. **GCC compiler** (for C syntax validation)
 
@@ -105,7 +105,7 @@ cp .env.example .env
 Edit the `.env` file and add your OpenAI API key:
 
 ```bash
-OPENAI_API_KEY=your_actual_openai_api_key_here
+ANTHROPIC_API_KEY=your_actual_openai_api_key_here
 TESSERACT_DATA_PATH=/usr/share/tesseract-ocr/4.00/tessdata
 ```
 
@@ -334,7 +334,7 @@ code-translator/
 │   ├── CodeTranslatorApplication.java
 │   ├── controller/TranslationController.java
 │   ├── service/
-│   │   ├── OpenAIService.java
+│   │   ├── AnthropicService.java
 │   │   ├── OCRService.java
 │   │   ├── SyntaxValidationService.java
 │   │   └── TranslationService.java
@@ -363,7 +363,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 🙏 Acknowledgments
 
-- **OpenAI** for providing the GPT-3.5 API
+- **OpenAI** for providing the CLAUDE API
 - **Tesseract OCR** for optical character recognition
 - **Spring Boot** community for the excellent framework
 - **Contributors** and **testers**
@@ -379,5 +379,5 @@ If you encounter any issues or have questions:
 
 ---
 
-**Made with ❤️ using Spring Boot, OpenAI GPT-3.5, and Tesseract OCR**
+**Made with ❤️ using Spring Boot, Anthropic , and Tesseract OCR**
 >>>>>>> 5101c77 (Initial commit)
